@@ -1,5 +1,4 @@
 set number
-syntax on
 set expandtab
 set tabstop=4
 set softtabstop=4
@@ -11,7 +10,7 @@ filetype plugin indent on
 
 "set textwidth=80
 "set guifont=Droid\ Sans\ Mono\ 13 
-set guifont=Bitstream\ Vera\ Sans\ Mono\ 11 "set guifont=*
+"set guifont=Bitstream\ Vera\ Sans\ Mono\ 11 "set guifont=*
 
 func! WordProcessorMode()
     setlocal textwidth=80
@@ -26,10 +25,10 @@ com! WP call WordProcessorMode()
 "au InsertLeave * colorscheme darkblue
 "au InsertEnter * colorscheme molokai
 
-syntax enable
+"syntax enable
 set background=dark
 "colorscheme solarized
-colorscheme molokai
+"colorscheme molokai
 
 set nocompatible
 filetype off
@@ -48,10 +47,11 @@ Plugin 'wincent/command-t'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'mattn/emmet-vim'
 Plugin 'itchyny/lightline.vim'
-"Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'mileszs/ack.vim'
+Plugin 'dracula/vim'
 "Bundle 'nsf/gocode'
 "Bundle 'Blackrush/vim-gocode'
 "Bundle 'Shougo/neocomplete'
@@ -146,3 +146,5 @@ let g:NERDCommentEmptyLines = 1
 
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+syntax on
+color dracula
